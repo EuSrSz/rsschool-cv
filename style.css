@@ -41,11 +41,18 @@ body {
     background-color: #829985;
 }
 
+.header-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .nav-list {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 0;
+    margin: 0;
     list-style: none;
 }
 
@@ -73,10 +80,17 @@ body {
 
 .section {
     width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d9d0c7;
 }
 
-.section:first-child{
+.section:first-child {
     width: 100%;
+}
+
+.section:nth-last-child(1), .section:nth-last-child(2) {
+    border-bottom: none;
 }
 
 .section-title {
@@ -87,21 +101,84 @@ body {
     color: #829985;
 }
 
-.section-item {
+/*----------Profile----------*/
+
+.profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 150px;
+}
+
+.profile-avatar img {
+    width: 128px;
+    height: auto;
+    object-fit: contain;
+}
+
+.profile-content {
+    text-align: center;
+}
+
+.profile-name {
     position: relative;
 }
 
-.section-item::before {
+.profile-name::after {
     content: "";
     position: absolute;
     top: 30px;
     left: 0;
     width: 100px;
-    border-bottom: 1px solid #829985;
+    height: 3px;
+    margin-left: 80px;
+    background-color: #829985;
 }
+
+.profile-prof {
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #829985;
+}
+
+/*----------Footer----------*/
 
 .footer {
     background-color: #829985;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.footer-copyright {
+    color: #fff;
+}
+
+.footer-github-link {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-logo {
+    min-height: 50px;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-logo {
+    width: 50px;
 }
 
 @media (max-width: 768px) {
